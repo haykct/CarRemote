@@ -7,33 +7,31 @@
 
 import SwiftUI
 
-struct NavigationBarView: View {
+struct NavigationBarItemView: View {
     var body: some View {
         HStack {
             Text("My QX55")
-                .font(.system(size: 25))
+                .font(.system(size: 20))
                 .fontWeight(.medium)
                 .padding(.trailing, 6)
             Divider()
-                .frame(width: 2, height: 30)
+                .frame(width: 2, height: 25)
                 .background(Colors.item)
             HStack(spacing: 0) {
                 Image("gas")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 36, height: 36)
+                    .frame(width: 29, height: 29)
                 Text("120mi")
-                    .font(.system(size: 22))
+                    .font(.system(size: 17))
                     .fontWeight(.bold)
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: 96)
-        .background(.white)
     }
 }
 
 struct NavigationBarView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationBarView()
+        NavigationBarItemView()
     }
 }

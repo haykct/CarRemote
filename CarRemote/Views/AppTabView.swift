@@ -35,7 +35,7 @@ struct AppTabView: View {
                 ForEach(tabItems, id: \.title) { item in
                     VStack() {
                         Rectangle().fill(selectedTab == item.type ? Colors.item : .white)
-                        .frame(width: (geometry.size.width / CGFloat(tabItems.count)) - 25, height: 3)
+                            .frame(width: (geometry.size.width / CGFloat(tabItems.count)) - 35, height: 3)
                         Image(item.imageName)
                             .resizable()
                             .scaledToFit()

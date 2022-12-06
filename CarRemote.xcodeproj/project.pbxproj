@@ -14,7 +14,7 @@
 		264CED00293E35FE0095EA32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264CECFF293E35FE0095EA32 /* Preview Assets.xcassets */; };
 		26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F51293F7EBD0043F42F /* HomeView.swift */; };
 		26E49F55293FC1EE0043F42F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F54293FC1EE0043F42F /* Color.swift */; };
-		26E49F57293FC70E0043F42F /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F56293FC70E0043F42F /* NavigationBarView.swift */; };
+		26E49F57293FC70E0043F42F /* NavigationBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		264CECFF293E35FE0095EA32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26E49F51293F7EBD0043F42F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		26E49F54293FC1EE0043F42F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		26E49F56293FC70E0043F42F /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 				264CECFA293E35FD0095EA32 /* ContainerView.swift */,
 				26E49F51293F7EBD0043F42F /* HomeView.swift */,
 				26393D33293F7A5600C10DC4 /* AppTabView.swift */,
-				26E49F56293FC70E0043F42F /* NavigationBarView.swift */,
+				26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			files = (
 				26393D34293F7A5600C10DC4 /* AppTabView.swift in Sources */,
 				26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */,
-				26E49F57293FC70E0043F42F /* NavigationBarView.swift in Sources */,
+				26E49F57293FC70E0043F42F /* NavigationBarItemView.swift in Sources */,
 				264CECFB293E35FD0095EA32 /* ContainerView.swift in Sources */,
 				26E49F55293FC1EE0043F42F /* Color.swift in Sources */,
 				264CECF9293E35FD0095EA32 /* CarRemoteApp.swift in Sources */,
