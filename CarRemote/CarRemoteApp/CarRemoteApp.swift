@@ -11,7 +11,7 @@ import SwiftUI
 struct CarRemoteApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            ContainerView()
         }
     }
 }

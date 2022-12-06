@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26393D34293F7A5600C10DC4 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26393D33293F7A5600C10DC4 /* AppTabView.swift */; };
 		264CECF9293E35FD0095EA32 /* CarRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264CECF8293E35FD0095EA32 /* CarRemoteApp.swift */; };
-		264CECFB293E35FD0095EA32 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264CECFA293E35FD0095EA32 /* HomeView.swift */; };
+		264CECFB293E35FD0095EA32 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264CECFA293E35FD0095EA32 /* ContainerView.swift */; };
 		264CECFD293E35FE0095EA32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264CECFC293E35FE0095EA32 /* Assets.xcassets */; };
 		264CED00293E35FE0095EA32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264CECFF293E35FE0095EA32 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26393D33293F7A5600C10DC4 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		264CECF5293E35FD0095EA32 /* CarRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		264CECF8293E35FD0095EA32 /* CarRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRemoteApp.swift; sourceTree = "<group>"; };
-		264CECFA293E35FD0095EA32 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		264CECFA293E35FD0095EA32 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		264CECFC293E35FE0095EA32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		264CECFF293E35FE0095EA32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +80,8 @@
 		264CED07293E36370095EA32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				264CECFA293E35FD0095EA32 /* HomeView.swift */,
+				264CECFA293E35FD0095EA32 /* ContainerView.swift */,
+				26393D33293F7A5600C10DC4 /* AppTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,6 +102,8 @@
 			dependencies = (
 			);
 			name = CarRemote;
+			packageProductDependencies = (
+			);
 			productName = CarRemote;
 			productReference = 264CECF5293E35FD0095EA32 /* CarRemote.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +132,8 @@
 				Base,
 			);
 			mainGroup = 264CECEC293E35FD0095EA32;
+			packageReferences = (
+			);
 			productRefGroup = 264CECF6293E35FD0095EA32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,7 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				264CECFB293E35FD0095EA32 /* HomeView.swift in Sources */,
+				26393D34293F7A5600C10DC4 /* AppTabView.swift in Sources */,
+				264CECFB293E35FD0095EA32 /* ContainerView.swift in Sources */,
 				264CECF9293E35FD0095EA32 /* CarRemoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,8 +297,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Hayrapetyan.CarRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,8 +329,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,9 +338,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Hayrapetyan.CarRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
