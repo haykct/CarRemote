@@ -21,12 +21,11 @@ struct AppTabItem: Hashable {
 }
 
 struct AppTabView: View {
-    let height: CGFloat = 83
-    let selectedTabColor = Color(red: 166/255, green: 106/255, blue: 83/255)
-    let tabItems = [AppTabItem(title: "Home", imageName: "home"),
-                    AppTabItem(title: "Vehicle", imageName: "car"),
-                    AppTabItem(title: "Location", imageName: "location"),
-                    AppTabItem(title: "Settings", imageName: "settings")]
+    private let height: CGFloat = 83
+    private let tabItems = [AppTabItem(title: "Home", imageName: "home"),
+                            AppTabItem(title: "Vehicle", imageName: "car"),
+                            AppTabItem(title: "Location", imageName: "location"),
+                            AppTabItem(title: "Settings", imageName: "settings")]
     
     @Binding var selectedTab: Tab
     
@@ -35,7 +34,7 @@ struct AppTabView: View {
             HStack(spacing: 0) {
                 ForEach(tabItems, id: \.title) { item in
                     VStack() {
-                        Rectangle().fill(selectedTab == item.type ? selectedTabColor : .white)
+                        Rectangle().fill(selectedTab == item.type ? Colors.item : .white)
                         .frame(width: (geometry.size.width / CGFloat(tabItems.count)) - 25, height: 3)
                         Image(item.imageName)
                             .resizable()
@@ -45,7 +44,7 @@ struct AppTabView: View {
                         Text(item.title)
                             .font(.system(size: 14).bold())
                     }
-                    .foregroundColor(selectedTab == item.type ? selectedTabColor : .black)
+                    .foregroundColor(selectedTab == item.type ? Colors.item : .black)
                     .onTapGesture {
                         withAnimation {
                             selectedTab = Tab(rawValue: item.title)!
