@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GradientCarView: View {
+    var carImageName: String
+    
     var body: some View {
         ZStack(alignment: .top) {
             LinearGradient(gradient: Gradient(colors: [Colors.background, .white]), startPoint: .top, endPoint: .bottom)
@@ -21,7 +23,7 @@ struct GradientCarView: View {
                     .foregroundColor(Colors.updateText)
             }
             .padding(.top, 27)
-            Image("infiniti")
+            Image(carImageName)
                 .resizable()
                 .scaledToFit()
                 .offset(x: 0, y: 58)
@@ -33,6 +35,6 @@ struct GradientCarView: View {
 
 struct GradientCarView_Previews: PreviewProvider {
     static var previews: some View {
-        GradientCarView()
+        GradientCarView(carImageName: "infiniti")
     }
 }

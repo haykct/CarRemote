@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct DoorsView: View {
-    private var iconNames = ["lock", "unlock"]
+    private let iconNames = ["lock", "unlock"]
+    
+    @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -26,7 +28,11 @@ struct DoorsView: View {
                 ForEach(iconNames, id: \.self) { item in
                     Spacer()
                     Button {
-                        
+                        if item == "lock" {
+                            
+                        } else {
+                            
+                        }
                     } label: {
                         Image(item)
                             .resizable()
@@ -51,6 +57,6 @@ struct DoorsView: View {
 
 struct DoorsView_Previews: PreviewProvider {
     static var previews: some View {
-        DoorsView()
+        DoorsView(viewModel: HomeViewModel(bluetoothService: DefaultBluetoothService()))
     }
 }

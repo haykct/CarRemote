@@ -9,6 +9,7 @@ import Foundation
 
 struct CarModel {
     var model: String
+    var imageName: String
     var availableMiles: Int
     var isLocked: Bool
 }

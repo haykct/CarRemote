@@ -8,5 +8,18 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
-    @Published var car = CarModel(model: "QX55", availableMiles: 120, isLocked: false)
+    var bluetoothService: BluetoothService
+    
+    @Published var car = CarModel(model: "QX55", imageName: "infiniti", availableMiles: 120, isLocked: false)
+    
+    init(bluetoothService: BluetoothService) {
+        self.bluetoothService = bluetoothService
+    }
+    
+    func closeDoors() {
+        bluetoothService.sendCloseDoorsRequest { [weak self] response in
+            self?.car.isLocked = response == .success
+        }
+    }
+    
 }

@@ -29,7 +29,9 @@ struct ContainerView: View {
         VStack(spacing: 0) {
             switch selectedTab {
             case .home:
-                HomeView()
+                let viewModel = HomeViewModel(bluetoothService: DefaultBluetoothService())
+                
+                HomeView(viewModel: viewModel)
             case .vehicle:
                 EmptyScreen(screen: 2)
             case .location:

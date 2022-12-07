@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct NavigationBarItemView: View {
+    var model: String
+    var availableMiles: Int
+    
     var body: some View {
         HStack {
-            Text("My QX55")
+            Text(model)
                 .font(.system(size: 20))
                 .fontWeight(.medium)
                 .padding(.trailing, 6)
@@ -21,7 +24,7 @@ struct NavigationBarItemView: View {
                 Image("gas")
                     .resizable()
                     .frame(width: 29, height: 29)
-                Text("120mi")
+                Text("\(availableMiles)mi")
                     .font(.system(size: 17))
                     .fontWeight(.heavy)
             }
@@ -32,6 +35,6 @@ struct NavigationBarItemView: View {
 
 struct NavigationBarView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationBarItemView()
+        NavigationBarItemView(model: "My QX55", availableMiles: 120)
     }
 }

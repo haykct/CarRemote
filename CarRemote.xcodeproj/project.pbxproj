@@ -16,6 +16,7 @@
 		264CED00293E35FE0095EA32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264CECFF293E35FE0095EA32 /* Preview Assets.xcassets */; };
 		2657E2B029411D0A0039BADD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2AF29411D0A0039BADD /* HomeViewModel.swift */; };
 		2657E2B329411DB10039BADD /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B229411DB10039BADD /* CarModel.swift */; };
+		2657E2B629415EE70039BADD /* DefaultBluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */; };
 		26683EBE293FFA1B0013D330 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 26683EBD293FFA1B0013D330 /* ActivityIndicatorView */; };
 		26683EC0293FFE850013D330 /* GradientCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26683EBF293FFE850013D330 /* GradientCarView.swift */; };
 		26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F51293F7EBD0043F42F /* HomeView.swift */; };
@@ -34,6 +35,7 @@
 		264CECFF293E35FE0095EA32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2657E2AF29411D0A0039BADD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2657E2B229411DB10039BADD /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBluetoothService.swift; sourceTree = "<group>"; };
 		26683EBF293FFE850013D330 /* GradientCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCarView.swift; sourceTree = "<group>"; };
 		26E49F51293F7EBD0043F42F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		26E49F54293FC1EE0043F42F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				264CED07293E36370095EA32 /* Views */,
 				2657E2AE29411CE70039BADD /* ViewModels */,
 				2657E2B129411D8B0039BADD /* Models */,
+				2657E2B429415EB50039BADD /* BlueToothService */,
 				26E49F53293FC1D40043F42F /* Color */,
 				264CECFC293E35FE0095EA32 /* Assets.xcassets */,
 				264CECFE293E35FE0095EA32 /* Preview Content */,
@@ -142,6 +145,14 @@
 				2657E2B229411DB10039BADD /* CarModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2657E2B429415EB50039BADD /* BlueToothService */ = {
+			isa = PBXGroup;
+			children = (
+				2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */,
+			);
+			path = BlueToothService;
 			sourceTree = "<group>";
 		};
 		26E49F53293FC1D40043F42F /* Color */ = {
@@ -232,6 +243,7 @@
 				26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */,
 				26683EC0293FFE850013D330 /* GradientCarView.swift in Sources */,
 				2657E2B029411D0A0039BADD /* HomeViewModel.swift in Sources */,
+				2657E2B629415EE70039BADD /* DefaultBluetoothService.swift in Sources */,
 				26E49F57293FC70E0043F42F /* NavigationBarItemView.swift in Sources */,
 				2657E2B329411DB10039BADD /* CarModel.swift in Sources */,
 				263533562940F2280059A145 /* DoorsView.swift in Sources */,
