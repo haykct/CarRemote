@@ -7,20 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263533562940F2280059A145 /* DoorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263533552940F2280059A145 /* DoorsView.swift */; };
+		263533582940F2350059A145 /* EngineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263533572940F2350059A145 /* EngineView.swift */; };
 		26393D34293F7A5600C10DC4 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26393D33293F7A5600C10DC4 /* AppTabView.swift */; };
 		264CECF9293E35FD0095EA32 /* CarRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264CECF8293E35FD0095EA32 /* CarRemoteApp.swift */; };
 		264CECFB293E35FD0095EA32 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264CECFA293E35FD0095EA32 /* ContainerView.swift */; };
 		264CECFD293E35FE0095EA32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264CECFC293E35FE0095EA32 /* Assets.xcassets */; };
 		264CED00293E35FE0095EA32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264CECFF293E35FE0095EA32 /* Preview Assets.xcassets */; };
+		26683EBE293FFA1B0013D330 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 26683EBD293FFA1B0013D330 /* ActivityIndicatorView */; };
+		26683EC0293FFE850013D330 /* GradientCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26683EBF293FFE850013D330 /* GradientCarView.swift */; };
+		26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F51293F7EBD0043F42F /* HomeView.swift */; };
+		26E49F55293FC1EE0043F42F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F54293FC1EE0043F42F /* Colors.swift */; };
+		26E49F57293FC70E0043F42F /* NavigationBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		263533552940F2280059A145 /* DoorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsView.swift; sourceTree = "<group>"; };
+		263533572940F2350059A145 /* EngineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineView.swift; sourceTree = "<group>"; };
 		26393D33293F7A5600C10DC4 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		264CECF5293E35FD0095EA32 /* CarRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		264CECF8293E35FD0095EA32 /* CarRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRemoteApp.swift; sourceTree = "<group>"; };
 		264CECFA293E35FD0095EA32 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		264CECFC293E35FE0095EA32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		264CECFF293E35FE0095EA32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		26683EBF293FFE850013D330 /* GradientCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCarView.swift; sourceTree = "<group>"; };
+		26E49F51293F7EBD0043F42F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		26E49F54293FC1EE0043F42F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,12 +41,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26683EBE293FFA1B0013D330 /* ActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		263533592940F23D0059A145 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				26E49F51293F7EBD0043F42F /* HomeView.swift */,
+				26683EBF293FFE850013D330 /* GradientCarView.swift */,
+				263533552940F2280059A145 /* DoorsView.swift */,
+				263533572940F2350059A145 /* EngineView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2635335A2940F2660059A145 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				264CECFA293E35FD0095EA32 /* ContainerView.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 		264CECEC293E35FD0095EA32 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +86,7 @@
 		264CECF7293E35FD0095EA32 /* CarRemote */ = {
 			isa = PBXGroup;
 			children = (
+				26E49F53293FC1D40043F42F /* Color */,
 				264CED06293E362B0095EA32 /* CarRemoteApp */,
 				264CED07293E36370095EA32 /* Views */,
 				264CECFC293E35FE0095EA32 /* Assets.xcassets */,
@@ -80,10 +114,20 @@
 		264CED07293E36370095EA32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				264CECFA293E35FD0095EA32 /* ContainerView.swift */,
+				2635335A2940F2660059A145 /* Container */,
+				263533592940F23D0059A145 /* Home */,
 				26393D33293F7A5600C10DC4 /* AppTabView.swift */,
+				26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		26E49F53293FC1D40043F42F /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				26E49F54293FC1EE0043F42F /* Colors.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +147,7 @@
 			);
 			name = CarRemote;
 			packageProductDependencies = (
+				26683EBD293FFA1B0013D330 /* ActivityIndicatorView */,
 			);
 			productName = CarRemote;
 			productReference = 264CECF5293E35FD0095EA32 /* CarRemote.app */;
@@ -133,6 +178,7 @@
 			);
 			mainGroup = 264CECEC293E35FD0095EA32;
 			packageReferences = (
+				26683EBC293FFA1B0013D330 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 			);
 			productRefGroup = 264CECF6293E35FD0095EA32 /* Products */;
 			projectDirPath = "";
@@ -161,7 +207,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				26393D34293F7A5600C10DC4 /* AppTabView.swift in Sources */,
+				26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */,
+				26683EC0293FFE850013D330 /* GradientCarView.swift in Sources */,
+				26E49F57293FC70E0043F42F /* NavigationBarItemView.swift in Sources */,
+				263533562940F2280059A145 /* DoorsView.swift in Sources */,
+				263533582940F2350059A145 /* EngineView.swift in Sources */,
 				264CECFB293E35FD0095EA32 /* ContainerView.swift in Sources */,
+				26E49F55293FC1EE0043F42F /* Colors.swift in Sources */,
 				264CECF9293E35FD0095EA32 /* CarRemoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +421,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26683EBC293FFA1B0013D330 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26683EBD293FFA1B0013D330 /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26683EBC293FFA1B0013D330 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 264CECED293E35FD0095EA32 /* Project object */;
 }

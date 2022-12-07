@@ -21,41 +21,46 @@ struct AppTabItem: Hashable {
 }
 
 struct AppTabView: View {
-    let height: CGFloat = 83
-    let selectedTabColor = Color(red: 166/255, green: 106/255, blue: 83/255)
-    let tabItems = [AppTabItem(title: "Home", imageName: "home"),
-                    AppTabItem(title: "Vehicle", imageName: "car"),
-                    AppTabItem(title: "Location", imageName: "location"),
-                    AppTabItem(title: "Settings", imageName: "settings")]
+    private let height: CGFloat = 83
+    private let tabItems = [AppTabItem(title: "Home", imageName: "home"),
+                            AppTabItem(title: "Vehicle", imageName: "car"),
+                            AppTabItem(title: "Location", imageName: "location"),
+                            AppTabItem(title: "Settings", imageName: "settings")]
     
     @Binding var selectedTab: Tab
     
     var body: some View {
-        GeometryReader { geometry in
-            HStack(spacing: 0) {
-                ForEach(tabItems, id: \.title) { item in
-                    VStack() {
-                        Rectangle().fill(selectedTab == item.type ? selectedTabColor : .white)
-                        .frame(width: (geometry.size.width / CGFloat(tabItems.count)) - 25, height: 3)
-                        Image(item.imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: geometry.size.width / CGFloat(tabItems.count),
-                                   height: 25)
-                        Text(item.title)
-                            .font(.system(size: 14).bold())
-                    }
-                    .foregroundColor(selectedTab == item.type ? selectedTabColor : .black)
-                    .onTapGesture {
-                        withAnimation {
-                            selectedTab = Tab(rawValue: item.title)!
-                        }
-                        
+        HStack(spacing: 0) {
+            ForEach(tabItems, id: \.title) { item in
+                Spacer()
+                VStack {
+                    Image(item.imageName)
+                    Text(item.title)
+                        .font(.system(size: 12).bold())
+                }
+                .overlay(
+                    Rectangle()
+                        .frame(width: 55, height: 2)
+                        .offset(x: 0, y: -37)
+                        .foregroundColor(selectedTab == item.type ? Colors.item : .clear)
+                )
+                .padding(.top, 17)
+                .foregroundColor(selectedTab == item.type ? Colors.item : .black)
+                .onTapGesture {
+                    withAnimation {
+                        selectedTab = Tab(rawValue: item.title)!
                     }
                 }
             }
-            .frame(width: geometry.size.width, height: height, alignment: .top)
+            Spacer()
         }
-        .frame(maxWidth: .infinity, maxHeight: height)
+    }
+}
+
+struct AppTabView_Previews: PreviewProvider {
+    static var previews: some View {
+        AppTabView(selectedTab: .constant(.home))
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
+            .previewDisplayName("iPhone 14 Pro")
     }
 }

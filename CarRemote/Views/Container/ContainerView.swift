@@ -18,7 +18,7 @@ struct EmptyScreen: View {
             Text("Screen \(screen)")
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(red: 229/255, green: 229/255, blue: 229/255))
+        .background(Colors.background)
     }
 }
 
@@ -29,7 +29,7 @@ struct ContainerView: View {
         VStack(spacing: 0) {
             switch selectedTab {
             case .home:
-                EmptyScreen(screen: 1)
+                HomeView()
             case .vehicle:
                 EmptyScreen(screen: 2)
             case .location:
