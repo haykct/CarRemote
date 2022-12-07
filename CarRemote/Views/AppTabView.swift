@@ -30,7 +30,6 @@ struct AppTabView: View {
     @Binding var selectedTab: Tab
     
     var body: some View {
-        
         HStack(spacing: 0) {
             ForEach(tabItems, id: \.title) { item in
                 Spacer()

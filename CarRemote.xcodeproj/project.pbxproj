@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263533562940F2280059A145 /* DoorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263533552940F2280059A145 /* DoorsView.swift */; };
+		263533582940F2350059A145 /* EngineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263533572940F2350059A145 /* EngineView.swift */; };
 		26393D34293F7A5600C10DC4 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26393D33293F7A5600C10DC4 /* AppTabView.swift */; };
 		264CECF9293E35FD0095EA32 /* CarRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264CECF8293E35FD0095EA32 /* CarRemoteApp.swift */; };
 		264CECFB293E35FD0095EA32 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264CECFA293E35FD0095EA32 /* ContainerView.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		263533552940F2280059A145 /* DoorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsView.swift; sourceTree = "<group>"; };
+		263533572940F2350059A145 /* EngineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineView.swift; sourceTree = "<group>"; };
 		26393D33293F7A5600C10DC4 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		264CECF5293E35FD0095EA32 /* CarRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		264CECF8293E35FD0095EA32 /* CarRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRemoteApp.swift; sourceTree = "<group>"; };
@@ -44,6 +48,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		263533592940F23D0059A145 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				26E49F51293F7EBD0043F42F /* HomeView.swift */,
+				26683EBF293FFE850013D330 /* GradientCarView.swift */,
+				263533552940F2280059A145 /* DoorsView.swift */,
+				263533572940F2350059A145 /* EngineView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2635335A2940F2660059A145 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				264CECFA293E35FD0095EA32 /* ContainerView.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 		264CECEC293E35FD0095EA32 = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +114,10 @@
 		264CED07293E36370095EA32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				264CECFA293E35FD0095EA32 /* ContainerView.swift */,
-				26E49F51293F7EBD0043F42F /* HomeView.swift */,
+				2635335A2940F2660059A145 /* Container */,
+				263533592940F23D0059A145 /* Home */,
 				26393D33293F7A5600C10DC4 /* AppTabView.swift */,
 				26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */,
-				26683EBF293FFE850013D330 /* GradientCarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +210,8 @@
 				26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */,
 				26683EC0293FFE850013D330 /* GradientCarView.swift in Sources */,
 				26E49F57293FC70E0043F42F /* NavigationBarItemView.swift in Sources */,
+				263533562940F2280059A145 /* DoorsView.swift in Sources */,
+				263533582940F2350059A145 /* EngineView.swift in Sources */,
 				264CECFB293E35FD0095EA32 /* ContainerView.swift in Sources */,
 				26E49F55293FC1EE0043F42F /* Colors.swift in Sources */,
 				264CECF9293E35FD0095EA32 /* CarRemoteApp.swift in Sources */,

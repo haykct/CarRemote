@@ -27,19 +27,23 @@ struct HomeView: View {
                         } label: {
                             Image("lock")
                                 .resizable()
-                                .scaledToFit()
-                            //                                .frame(width: 50, height: 50)
+                                .frame(width: 45, height: 45)
                         }
                         .frame(width: 64, height: 64)
                         .background(.black)
                         .clipShape(Circle())
                         Spacer()
-//                        Button("2") {
-//                            
-//                        }
-//                        .frame(width: 64, height: 64)
-//                        .background(.yellow)
-//                        .clipShape(Circle())
+                        Button {
+                            
+                        } label: {
+                            Image("unlock")
+                                .resizable()
+                                .frame(width: 45, height: 45)
+                        }
+                        .disabled(true)
+                        .frame(width: 64, height: 64)
+                        .background(.black)
+                        .clipShape(Circle())
                         Spacer()
                     }
                     .frame(maxWidth: .infinity, maxHeight: 96)
