@@ -12,7 +12,15 @@ struct GradientCarView: View {
         ZStack(alignment: .top) {
             LinearGradient(gradient: Gradient(colors: [Colors.background, .white]), startPoint: .top, endPoint: .bottom)
                 .frame(height: 130)
-            
+            HStack(spacing: 3) {
+                Image("refresh")
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                Text("Updated 1min ago")
+                    .font(.system(size: 15, weight: .heavy))
+                    .foregroundColor(Colors.updateText)
+            }
+            .padding(.top, 27)
             Image("infiniti")
                 .resizable()
                 .scaledToFit()

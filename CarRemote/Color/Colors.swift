@@ -12,4 +12,5 @@ struct Colors {
     static let item = Color(red: 166/255, green: 106/255, blue: 83/255)
     static let buttonContainer = Color(red: 247/255, green: 247/255, blue: 247/255)
     static let border = Color(red: 235/255, green: 235/255, blue: 235/255)
+    static let updateText = Color(red: 119/255, green: 119/255, blue: 119/255)
 }

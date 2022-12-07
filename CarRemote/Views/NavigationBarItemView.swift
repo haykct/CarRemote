@@ -23,7 +23,7 @@ struct NavigationBarItemView: View {
                     .frame(width: 29, height: 29)
                 Text("120mi")
                     .font(.system(size: 17))
-                    .fontWeight(.bold)
+                    .fontWeight(.heavy)
             }
         }
     }
