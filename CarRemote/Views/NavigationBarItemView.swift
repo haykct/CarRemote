@@ -26,6 +26,7 @@ struct NavigationBarItemView: View {
                     .fontWeight(.heavy)
             }
         }
+        .fixedSize()
     }
 }
 
