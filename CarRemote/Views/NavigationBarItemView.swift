@@ -16,7 +16,7 @@ struct NavigationBarItemView: View {
                 .padding(.trailing, 6)
             Divider()
                 .frame(width: 2, height: 25)
-                .background(Colors.item)
+                .overlay(Colors.item)
             HStack(spacing: 0) {
                 Image("gas")
                     .resizable()

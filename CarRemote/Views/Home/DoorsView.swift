@@ -12,8 +12,16 @@ struct DoorsView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text("Doors")
-                .font(.system(size: 20, weight: .heavy))
+            HStack(alignment: .bottom) {
+                Text("Doors")
+                    .font(.system(size: 20, weight: .heavy))
+                Divider()
+                    .frame(width: 2, height: 23)
+                    .overlay(Colors.updateText)
+                Text("Locked")
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundColor(Colors.updateText)
+            }
             HStack {
                 ForEach(iconNames, id: \.self) { item in
                     Spacer()
