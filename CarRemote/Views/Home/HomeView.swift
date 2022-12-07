@@ -23,7 +23,7 @@ struct HomeView: View {
                     EngineView()
                     Spacer(minLength: spacing)
                 }
-                .padding(.top, 130)
+                .padding(.top, 150)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .background(Colors.background, ignoresSafeAreaEdges: .bottom)

@@ -11,29 +11,33 @@ struct DoorsView: View {
     private var iconNames = ["lock", "unlock"]
     
     var body: some View {
-        HStack {
-            ForEach(iconNames, id: \.self) { item in
-                Spacer()
-                Button {
-                    
-                } label: {
-                    Image(item)
-                        .resizable()
-                        .frame(width: 42, height: 42)
+        VStack(alignment: .leading, spacing: 5) {
+            Text("Doors")
+                .font(.system(size: 20, weight: .heavy))
+            HStack {
+                ForEach(iconNames, id: \.self) { item in
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Image(item)
+                            .resizable()
+                            .frame(width: 42, height: 42)
+                    }
+                    .frame(width: 64, height: 64)
+                    .background(.black)
+                    .clipShape(Circle())
                 }
-                .frame(width: 64, height: 64)
-                .background(.black)
-                .clipShape(Circle())
+                Spacer()
             }
-            Spacer()
+            .frame(maxWidth: .infinity, maxHeight: 96)
+            .background(Colors.buttonContainer)
+            .cornerRadius(5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 5)
+                    .stroke(Colors.border, lineWidth: 2)
+            )
         }
-        .frame(maxWidth: .infinity, maxHeight: 96)
-        .background(Colors.buttonContainer)
-        .cornerRadius(5)
-        .overlay(
-            RoundedRectangle(cornerRadius: 5)
-                .stroke(Colors.border, lineWidth: 2)
-        )
     }
 }
 
