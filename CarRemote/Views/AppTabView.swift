@@ -41,7 +41,7 @@ struct AppTabView: View {
                 }
                 .overlay(
                     Rectangle()
-                        .frame(width: 55, height: 3)
+                        .frame(width: 55, height: 2)
                         .offset(x: 0, y: -37)
                         .foregroundColor(selectedTab == item.type ? Colors.item : .clear)
                 )

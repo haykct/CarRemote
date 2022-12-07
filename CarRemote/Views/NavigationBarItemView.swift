@@ -20,7 +20,6 @@ struct NavigationBarItemView: View {
             HStack(spacing: 0) {
                 Image("gas")
                     .resizable()
-                    .scaledToFit()
                     .frame(width: 29, height: 29)
                 Text("120mi")
                     .font(.system(size: 17))
