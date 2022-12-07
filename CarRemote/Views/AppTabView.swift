@@ -30,31 +30,38 @@ struct AppTabView: View {
     @Binding var selectedTab: Tab
     
     var body: some View {
-        GeometryReader { geometry in
-            HStack(spacing: 0) {
-                ForEach(tabItems, id: \.title) { item in
-                    VStack() {
-                        Rectangle().fill(selectedTab == item.type ? Colors.item : .white)
-                            .frame(width: (geometry.size.width / CGFloat(tabItems.count)) - 35, height: 3)
-                        Image(item.imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: geometry.size.width / CGFloat(tabItems.count),
-                                   height: 25)
-                        Text(item.title)
-                            .font(.system(size: 14).bold())
-                    }
-                    .foregroundColor(selectedTab == item.type ? Colors.item : .black)
-                    .onTapGesture {
-                        withAnimation {
-                            selectedTab = Tab(rawValue: item.title)!
-                        }
-                        
+        
+        HStack(spacing: 0) {
+            ForEach(tabItems, id: \.title) { item in
+                Spacer()
+                VStack {
+                    Image(item.imageName)
+                    Text(item.title)
+                        .font(.system(size: 12).bold())
+                }
+                .overlay(
+                    Rectangle()
+                        .frame(width: 55, height: 3)
+                        .offset(x: 0, y: -37)
+                        .foregroundColor(selectedTab == item.type ? Colors.item : .clear)
+                )
+                .padding(.top, 17)
+                .foregroundColor(selectedTab == item.type ? Colors.item : .black)
+                .onTapGesture {
+                    withAnimation {
+                        selectedTab = Tab(rawValue: item.title)!
                     }
                 }
             }
-            .frame(width: geometry.size.width, height: height, alignment: .top)
+            Spacer()
         }
-        .frame(maxWidth: .infinity, maxHeight: height)
+    }
+}
+
+struct AppTabView_Previews: PreviewProvider {
+    static var previews: some View {
+        AppTabView(selectedTab: .constant(.home))
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
+            .previewDisplayName("iPhone 14 Pro")
     }
 }

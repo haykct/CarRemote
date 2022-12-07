@@ -6,32 +6,78 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
 
 struct HomeView: View {
+//    @State var showLoadingIndicator = true
+    private var spacing: CGFloat = 20
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                ZStack(alignment: .top) {
-                    LinearGradient(gradient: Gradient(colors: [Colors.background, .white]), startPoint: .top, endPoint: .bottom)
-                        .frame(height: 130)
+                GradientCarView()
+                
+                HStack() {
+                    Spacer(minLength: spacing)
                     
-                    Image("infiniti")
-                        .resizable()
-                        .scaledToFit()
-                        .offset(x: 0, y: 58)
-                        .frame(width: 280, height: 170)
+                    HStack {
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            Image("lock")
+                                .resizable()
+                                .scaledToFit()
+                            //                                .frame(width: 50, height: 50)
+                        }
+                        .frame(width: 64, height: 64)
+                        .background(.black)
+                        .clipShape(Circle())
+                        Spacer()
+//                        Button("2") {
+//                            
+//                        }
+//                        .frame(width: 64, height: 64)
+//                        .background(.yellow)
+//                        .clipShape(Circle())
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 96)
+                    .background(Colors.buttonContainer)
+                    .cornerRadius(4)
+                    Spacer(minLength: spacing)
+                    HStack {
+//                        Button("1") {
+//
+//                        }
+//                        .frame(width: 40, height: 40)
+//                        .background(.red)
+//                        .clipShape(Circle())
+//
+//                        Button("2") {
+//
+//                        }
+//                        .frame(width: 40, height: 40)
+//                        .background(.yellow)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 96)
+                    .background(Colors.buttonContainer)
+                    .cornerRadius(4)
+                    Spacer(minLength: spacing)
                 }
-                .frame(height: 130, alignment: .top)
-                Text("a")
+                .padding(.top, 130)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .background(Colors.background, ignoresSafeAreaEdges: .bottom)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     NavigationBarItemView()
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .background(Colors.background, ignoresSafeAreaEdges: .bottom)
+            
+//            ActivityIndicatorView(isVisible: $showLoadingIndicator, type: .growingArc(.green, lineWidth: 2))
+            //                    .frame(width: 100, height: 100)
         }
     }
 }
