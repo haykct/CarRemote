@@ -6,19 +6,19 @@
 //
 
 import SwiftUI
-import ActivityIndicatorView
 
 struct HomeView: View {
-//    @State var showLoadingIndicator = true
-    private var spacing: CGFloat = 20
+    private let spacing: CGFloat = 20
+    @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                GradientCarView()
+                GradientCarView(carImageName: viewModel.car.imageName)
                 HStack() {
                     Spacer(minLength: spacing)
                     DoorsView()
+                        .environmentObject(viewModel)
                     Spacer(minLength: spacing)
                     EngineView()
                     Spacer(minLength: spacing)
@@ -30,19 +30,17 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    NavigationBarItemView()
+                    NavigationBarItemView(model: viewModel.car.model,
+                                          availableMiles: viewModel.car.availableMiles)
                 }
             }
-            
-//            ActivityIndicatorView(isVisible: $showLoadingIndicator, type: .growingArc(.green, lineWidth: 2))
-            //                    .frame(width: 100, height: 100)
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: HomeViewModel(bluetoothService: DefaultBluetoothService()))
             .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
             .previewDisplayName("iPhone 14 Pro")
     }

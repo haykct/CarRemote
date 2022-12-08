@@ -6,36 +6,39 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
 
 struct DoorsView: View {
-    private var iconNames = ["lock", "unlock"]
+    @State var showLoading = false
+    @EnvironmentObject var viewModel: HomeViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack(alignment: .bottom) {
                 Text("Doors")
                     .font(.system(size: 20, weight: .heavy))
-                Divider()
-                    .frame(width: 2, height: 23)
-                    .overlay(Colors.updateText)
-                Text("Locked")
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(Colors.updateText)
+                
+                if showLoading {
+                    DoorsStateView(text: "...")
+                }
+                
+                if viewModel.car.isLocked {
+                    DoorsStateView(text: "Locked")
+                }
             }
             HStack {
-                ForEach(iconNames, id: \.self) { item in
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        Image(item)
-                            .resizable()
-                            .frame(width: 42, height: 42)
-                    }
+                Spacer()
+                
+                if showLoading {
+                    ActivityIndicatorView(isVisible: $showLoading,
+                                          type: .growingArc(Colors.item, lineWidth: 2))
                     .frame(width: 64, height: 64)
-                    .background(.black)
-                    .clipShape(Circle())
+                } else {
+                    LockButton(showLoading: $showLoading)
                 }
+                
+                Spacer()
+                UnlockButton(showLoading: showLoading)
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: 96)
@@ -46,11 +49,15 @@ struct DoorsView: View {
                     .stroke(Colors.border, lineWidth: 2)
             )
         }
+        .onReceive(viewModel.$car) { _ in
+            showLoading = false
+        }
     }
 }
 
 struct DoorsView_Previews: PreviewProvider {
     static var previews: some View {
         DoorsView()
+            .environmentObject(HomeViewModel(bluetoothService: DefaultBluetoothService()))
     }
 }

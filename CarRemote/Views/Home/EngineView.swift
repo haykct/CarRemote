@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EngineView: View {
-    private var titles = ["START", "STOP"]
+    let titles = ["START", "STOP"]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {

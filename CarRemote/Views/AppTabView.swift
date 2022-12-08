@@ -22,7 +22,7 @@ struct AppTabItem: Hashable {
 
 struct AppTabView: View {
     private let height: CGFloat = 83
-    private let tabItems = [AppTabItem(title: "Home", imageName: "home"),
+    let tabItems = [AppTabItem(title: "Home", imageName: "home"),
                             AppTabItem(title: "Vehicle", imageName: "car"),
                             AppTabItem(title: "Location", imageName: "location"),
                             AppTabItem(title: "Settings", imageName: "settings")]

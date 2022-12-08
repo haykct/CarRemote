@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct EmptyScreen: View {
-    private var screen = 2
+    let screen: Int
 
-    init(screen: Int) {
-        self.screen = screen
-    }
     var body: some View {
         VStack {
             Text("Screen \(screen)")
@@ -29,7 +26,9 @@ struct ContainerView: View {
         VStack(spacing: 0) {
             switch selectedTab {
             case .home:
-                HomeView()
+                let viewModel = HomeViewModel(bluetoothService: DefaultBluetoothService())
+                
+                HomeView(viewModel: viewModel)
             case .vehicle:
                 EmptyScreen(screen: 2)
             case .location:
