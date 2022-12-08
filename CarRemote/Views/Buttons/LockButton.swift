@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct LockButton: View {
+    @State var isAlertPresented = false
     @Binding var showLoading: Bool
     @EnvironmentObject var viewModel: HomeViewModel
     
     var body: some View {
         Button {
-            showLoading = true
-            viewModel.closeDoors()
+            isAlertPresented = true
         } label: {
             Image("lock")
                 .resizable()
@@ -24,6 +24,15 @@ struct LockButton: View {
         .background(viewModel.car.isLocked ? Colors.item : .black)
         .disabled(viewModel.car.isLocked)
         .clipShape(Circle())
+        .alert(isPresented: $isAlertPresented) {
+            Alert(title: Text("Are you sure?"),
+                  message: Text("Please confirm that you want to lock the doors of \"My \(viewModel.car.model)\""),
+                  primaryButton: .default(Text("Yes, Lock"), action: {
+                showLoading = true
+                viewModel.closeDoors()
+            }),
+                  secondaryButton: .cancel())
+        }
     }
 }
 
