@@ -6,12 +6,9 @@
 //
 
 import SwiftUI
-import ActivityIndicatorView
 
 struct HomeView: View {
-//    @State var showLoadingIndicator = true
     private let spacing: CGFloat = 20
-    
     @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
@@ -20,7 +17,8 @@ struct HomeView: View {
                 GradientCarView(carImageName: viewModel.car.imageName)
                 HStack() {
                     Spacer(minLength: spacing)
-                    DoorsView(viewModel: viewModel)
+                    DoorsView()
+                        .environmentObject(viewModel)
                     Spacer(minLength: spacing)
                     EngineView()
                     Spacer(minLength: spacing)
@@ -36,9 +34,6 @@ struct HomeView: View {
                                           availableMiles: viewModel.car.availableMiles)
                 }
             }
-            
-//            ActivityIndicatorView(isVisible: $showLoadingIndicator, type: .growingArc(.green, lineWidth: 2))
-            //                    .frame(width: 100, height: 100)
         }
     }
 }

@@ -6,11 +6,47 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
+
+struct LockButton: View {
+    @Binding var showLoading: Bool
+    @EnvironmentObject var viewModel: HomeViewModel
+    
+    var body: some View {
+        Button {
+            showLoading = true
+            viewModel.closeDoors()
+        } label: {
+            Image("lock")
+                .resizable()
+                .frame(width: 42, height: 42)
+        }
+        .frame(width: 64, height: 64)
+        .background(viewModel.car.isLocked ? Colors.item : .black)
+        .disabled(viewModel.car.isLocked)
+        .clipShape(Circle())
+    }
+}
+
+struct UnlockButton: View {
+    var showLoading: Bool
+    
+    var body: some View {
+        Button {} label: {
+            Image("unlock")
+                .resizable()
+                .frame(width: 42, height: 42)
+        }
+        .frame(width: 64, height: 64)
+        .background(showLoading ? .black.opacity(0.5) : .black)
+        .disabled(showLoading)
+        .clipShape(Circle())
+    }
+}
 
 struct DoorsView: View {
-    private let iconNames = ["lock", "unlock"]
-    
-    @ObservedObject var viewModel: HomeViewModel
+    @State var showLoading = false
+    @EnvironmentObject var viewModel: HomeViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -25,23 +61,18 @@ struct DoorsView: View {
                     .foregroundColor(Colors.updateText)
             }
             HStack {
-                ForEach(iconNames, id: \.self) { item in
-                    Spacer()
-                    Button {
-                        if item == "lock" {
-                            
-                        } else {
-                            
-                        }
-                    } label: {
-                        Image(item)
-                            .resizable()
-                            .frame(width: 42, height: 42)
-                    }
+                Spacer()
+                
+                if showLoading {
+                    ActivityIndicatorView(isVisible: $showLoading,
+                                          type: .growingArc(Colors.item, lineWidth: 2))
                     .frame(width: 64, height: 64)
-                    .background(.black)
-                    .clipShape(Circle())
+                } else {
+                    LockButton(showLoading: $showLoading)
                 }
+                
+                Spacer()
+                UnlockButton(showLoading: showLoading)
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: 96)
@@ -52,11 +83,15 @@ struct DoorsView: View {
                     .stroke(Colors.border, lineWidth: 2)
             )
         }
+        .onReceive(viewModel.$car) { _ in
+            showLoading = false
+        }
     }
 }
 
 struct DoorsView_Previews: PreviewProvider {
     static var previews: some View {
-        DoorsView(viewModel: HomeViewModel(bluetoothService: DefaultBluetoothService()))
+        DoorsView()
+            .environmentObject(HomeViewModel(bluetoothService: DefaultBluetoothService()))
     }
 }
