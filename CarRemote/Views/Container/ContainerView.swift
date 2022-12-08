@@ -21,14 +21,18 @@ struct EmptyScreen: View {
 
 struct ContainerView: View {
     @State var selectedTab: Tab = .home
+    let homeView: HomeView
+    
+    init() {
+        let viewModel = HomeViewModel(bluetoothService: DefaultBluetoothService())
+        homeView = HomeView(viewModel: viewModel)
+    }
     
     var body: some View {
         VStack(spacing: 0) {
             switch selectedTab {
             case .home:
-                let viewModel = HomeViewModel(bluetoothService: DefaultBluetoothService())
-                
-                HomeView(viewModel: viewModel)
+                homeView
             case .vehicle:
                 EmptyScreen(screen: 2)
             case .location:
