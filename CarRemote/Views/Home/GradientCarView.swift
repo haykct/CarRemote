@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GradientCarView: View {
-    var carImageName: String
+    let carImageName: String
     
     var body: some View {
         ZStack(alignment: .top) {

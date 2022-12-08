@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NavigationBarItemView: View {
-    var model: String
-    var availableMiles: Int
+    let model: String
+    let availableMiles: Int
     
     var body: some View {
         HStack {

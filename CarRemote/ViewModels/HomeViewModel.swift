@@ -8,7 +8,11 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
-    var bluetoothService: BluetoothService
+    private let bluetoothService: BluetoothService
+    
+    init(service: BluetoothService) {
+        bluetoothService = service
+    }
     
     @Published var car = CarModel(model: "QX55", imageName: "infiniti", availableMiles: 120, isLocked: false)
     

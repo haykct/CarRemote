@@ -8,42 +8,6 @@
 import SwiftUI
 import ActivityIndicatorView
 
-struct LockButton: View {
-    @Binding var showLoading: Bool
-    @EnvironmentObject var viewModel: HomeViewModel
-    
-    var body: some View {
-        Button {
-            showLoading = true
-            viewModel.closeDoors()
-        } label: {
-            Image("lock")
-                .resizable()
-                .frame(width: 42, height: 42)
-        }
-        .frame(width: 64, height: 64)
-        .background(viewModel.car.isLocked ? Colors.item : .black)
-        .disabled(viewModel.car.isLocked)
-        .clipShape(Circle())
-    }
-}
-
-struct UnlockButton: View {
-    var showLoading: Bool
-    
-    var body: some View {
-        Button {} label: {
-            Image("unlock")
-                .resizable()
-                .frame(width: 42, height: 42)
-        }
-        .frame(width: 64, height: 64)
-        .background(showLoading ? .black.opacity(0.5) : .black)
-        .disabled(showLoading)
-        .clipShape(Circle())
-    }
-}
-
 struct DoorsView: View {
     @State var showLoading = false
     @EnvironmentObject var viewModel: HomeViewModel
@@ -53,12 +17,14 @@ struct DoorsView: View {
             HStack(alignment: .bottom) {
                 Text("Doors")
                     .font(.system(size: 20, weight: .heavy))
-                Divider()
-                    .frame(width: 2, height: 23)
-                    .overlay(Colors.updateText)
-                Text("Locked")
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(Colors.updateText)
+                
+                if showLoading {
+                    DoorsStateView(text: "...")
+                }
+                
+                if viewModel.car.isLocked {
+                    DoorsStateView(text: "Locked")
+                }
             }
             HStack {
                 Spacer()

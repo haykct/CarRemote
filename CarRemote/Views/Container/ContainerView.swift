@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct EmptyScreen: View {
-    private var screen = 2
+    let screen: Int
 
-    init(screen: Int) {
-        self.screen = screen
-    }
     var body: some View {
         VStack {
             Text("Screen \(screen)")

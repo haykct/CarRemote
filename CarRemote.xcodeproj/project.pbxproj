@@ -17,6 +17,9 @@
 		2657E2B029411D0A0039BADD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2AF29411D0A0039BADD /* HomeViewModel.swift */; };
 		2657E2B329411DB10039BADD /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B229411DB10039BADD /* CarModel.swift */; };
 		2657E2B629415EE70039BADD /* DefaultBluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */; };
+		2657E2B9294225C80039BADD /* LockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B8294225C80039BADD /* LockButton.swift */; };
+		2657E2BB2942264D0039BADD /* UnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2BA2942264D0039BADD /* UnlockButton.swift */; };
+		2657E2BD294239F40039BADD /* DoorsStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2BC294239F40039BADD /* DoorsStateView.swift */; };
 		26683EBE293FFA1B0013D330 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 26683EBD293FFA1B0013D330 /* ActivityIndicatorView */; };
 		26683EC0293FFE850013D330 /* GradientCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26683EBF293FFE850013D330 /* GradientCarView.swift */; };
 		26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F51293F7EBD0043F42F /* HomeView.swift */; };
@@ -36,6 +39,9 @@
 		2657E2AF29411D0A0039BADD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2657E2B229411DB10039BADD /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBluetoothService.swift; sourceTree = "<group>"; };
+		2657E2B8294225C80039BADD /* LockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockButton.swift; sourceTree = "<group>"; };
+		2657E2BA2942264D0039BADD /* UnlockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockButton.swift; sourceTree = "<group>"; };
+		2657E2BC294239F40039BADD /* DoorsStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsStateView.swift; sourceTree = "<group>"; };
 		26683EBF293FFE850013D330 /* GradientCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCarView.swift; sourceTree = "<group>"; };
 		26E49F51293F7EBD0043F42F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		26E49F54293FC1EE0043F42F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -61,6 +67,7 @@
 				26683EBF293FFE850013D330 /* GradientCarView.swift */,
 				263533552940F2280059A145 /* DoorsView.swift */,
 				263533572940F2350059A145 /* EngineView.swift */,
+				2657E2BC294239F40039BADD /* DoorsStateView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 		264CED07293E36370095EA32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2657E2B72942257E0039BADD /* Buttons */,
 				2635335A2940F2660059A145 /* Container */,
 				263533592940F23D0059A145 /* Home */,
 				26393D33293F7A5600C10DC4 /* AppTabView.swift */,
@@ -153,6 +161,15 @@
 				2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */,
 			);
 			path = BlueToothService;
+			sourceTree = "<group>";
+		};
+		2657E2B72942257E0039BADD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2657E2B8294225C80039BADD /* LockButton.swift */,
+				2657E2BA2942264D0039BADD /* UnlockButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		26E49F53293FC1D40043F42F /* Color */ = {
@@ -239,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2657E2B9294225C80039BADD /* LockButton.swift in Sources */,
 				26393D34293F7A5600C10DC4 /* AppTabView.swift in Sources */,
 				26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */,
 				26683EC0293FFE850013D330 /* GradientCarView.swift in Sources */,
@@ -250,7 +268,9 @@
 				263533582940F2350059A145 /* EngineView.swift in Sources */,
 				264CECFB293E35FD0095EA32 /* ContainerView.swift in Sources */,
 				26E49F55293FC1EE0043F42F /* Colors.swift in Sources */,
+				2657E2BD294239F40039BADD /* DoorsStateView.swift in Sources */,
 				264CECF9293E35FD0095EA32 /* CarRemoteApp.swift in Sources */,
+				2657E2BB2942264D0039BADD /* UnlockButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
