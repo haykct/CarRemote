@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
 
 struct EmptyScreen: View {
     let screen: Int
+    @State var showLoading = true
 
     var body: some View {
         VStack {
@@ -21,24 +23,18 @@ struct EmptyScreen: View {
 
 struct ContainerView: View {
     @State var selectedTab: Tab = .home
-    let viewModel = HomeViewModel(bluetoothService: DefaultBluetoothService())
-    let homeView: HomeView
-    
-    init() {
-        homeView = HomeView(viewModel: viewModel)
-    }
     
     var body: some View {
         VStack(spacing: 0) {
-            switch selectedTab {
-            case .home:
-                homeView
-            case .vehicle:
+            TabView(selection: $selectedTab) {
+                HomeView(viewModel: HomeViewModel(bluetoothService: DefaultBluetoothService()))
+                    .tag(Tab.home)
                 EmptyScreen(screen: 2)
-            case .location:
+                    .tag(Tab.vehicle)
                 EmptyScreen(screen: 3)
-            case .settings:
+                    .tag(Tab.location)
                 EmptyScreen(screen: 4)
+                    .tag(Tab.settings)
             }
             
             AppTabView(selectedTab: $selectedTab)
