@@ -14,7 +14,7 @@ struct DoorsView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            HStack(alignment: .bottom) {
+            HStack(alignment: .center) {
                 Text("Doors")
                     .font(.system(size: 20, weight: .heavy))
                 

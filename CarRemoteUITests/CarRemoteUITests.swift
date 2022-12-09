@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import SwiftUI
 
 final class CarRemoteUITests: XCTestCase {
     

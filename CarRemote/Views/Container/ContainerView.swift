@@ -21,10 +21,10 @@ struct EmptyScreen: View {
 
 struct ContainerView: View {
     @State var selectedTab: Tab = .home
+    let viewModel = HomeViewModel(bluetoothService: DefaultBluetoothService())
     let homeView: HomeView
     
     init() {
-        let viewModel = HomeViewModel(bluetoothService: DefaultBluetoothService())
         homeView = HomeView(viewModel: viewModel)
     }
     

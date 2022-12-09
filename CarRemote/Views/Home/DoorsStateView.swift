@@ -17,6 +17,7 @@ struct DoorsStateView: View {
         Text(text)
             .font(.system(size: 16, weight: .bold))
             .foregroundColor(Colors.updateText)
+            .padding(.top, 2)
     }
 }
 
