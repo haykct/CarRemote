@@ -20,9 +20,10 @@ class HomeViewModel: ObservableObject {
         self.bluetoothService = bluetoothService
     }
     
-    func closeDoors() {
+    func closeDoors(completion: (() -> Void)? = nil) {
         bluetoothService.sendCloseDoorsRequest { [weak self] response in
             self?.car.isLocked = response == .success
+            completion?()
         }
     }
     

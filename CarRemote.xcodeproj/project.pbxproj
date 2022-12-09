@@ -22,10 +22,41 @@
 		2657E2BD294239F40039BADD /* DoorsStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2BC294239F40039BADD /* DoorsStateView.swift */; };
 		26683EBE293FFA1B0013D330 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 26683EBD293FFA1B0013D330 /* ActivityIndicatorView */; };
 		26683EC0293FFE850013D330 /* GradientCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26683EBF293FFE850013D330 /* GradientCarView.swift */; };
+		26845FA62942781100ACDBDD /* CarRemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26845FA52942781100ACDBDD /* CarRemoteUITests.swift */; };
+		26845FAE294289B100ACDBDD /* DefaultBluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */; };
+		26845FAF294289BF00ACDBDD /* DoorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263533552940F2280059A145 /* DoorsView.swift */; };
+		26845FB0294289C300ACDBDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2AF29411D0A0039BADD /* HomeViewModel.swift */; };
+		26845FB129428D4600ACDBDD /* DoorsStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2BC294239F40039BADD /* DoorsStateView.swift */; };
+		26845FB229428D4A00ACDBDD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F54293FC1EE0043F42F /* Colors.swift */; };
+		26845FB329428D5500ACDBDD /* LockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B8294225C80039BADD /* LockButton.swift */; };
+		26845FB429428D5500ACDBDD /* UnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2BA2942264D0039BADD /* UnlockButton.swift */; };
+		26845FB529428DA800ACDBDD /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B229411DB10039BADD /* CarModel.swift */; };
+		26845FBA29428EB500ACDBDD /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 26845FB929428EB500ACDBDD /* ActivityIndicatorView */; };
+		26845FC22942AE2700ACDBDD /* CarRemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26845FC12942AE2700ACDBDD /* CarRemoteTests.swift */; };
+		26845FC82942AF3B00ACDBDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2AF29411D0A0039BADD /* HomeViewModel.swift */; };
+		26845FC92942AF3B00ACDBDD /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B229411DB10039BADD /* CarModel.swift */; };
+		26845FCA2942AF3B00ACDBDD /* DefaultBluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */; };
 		26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F51293F7EBD0043F42F /* HomeView.swift */; };
 		26E49F55293FC1EE0043F42F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F54293FC1EE0043F42F /* Colors.swift */; };
 		26E49F57293FC70E0043F42F /* NavigationBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26845FA92942781100ACDBDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 264CECED293E35FD0095EA32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264CECF4293E35FD0095EA32;
+			remoteInfo = CarRemote;
+		};
+		26845FC32942AE2700ACDBDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 264CECED293E35FD0095EA32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264CECF4293E35FD0095EA32;
+			remoteInfo = CarRemote;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		263533552940F2280059A145 /* DoorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsView.swift; sourceTree = "<group>"; };
@@ -43,6 +74,10 @@
 		2657E2BA2942264D0039BADD /* UnlockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockButton.swift; sourceTree = "<group>"; };
 		2657E2BC294239F40039BADD /* DoorsStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsStateView.swift; sourceTree = "<group>"; };
 		26683EBF293FFE850013D330 /* GradientCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCarView.swift; sourceTree = "<group>"; };
+		26845FA32942781100ACDBDD /* CarRemoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRemoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26845FA52942781100ACDBDD /* CarRemoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRemoteUITests.swift; sourceTree = "<group>"; };
+		26845FBF2942AE2700ACDBDD /* CarRemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRemoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26845FC12942AE2700ACDBDD /* CarRemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRemoteTests.swift; sourceTree = "<group>"; };
 		26E49F51293F7EBD0043F42F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		26E49F54293FC1EE0043F42F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItemView.swift; sourceTree = "<group>"; };
@@ -54,6 +89,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				26683EBE293FFA1B0013D330 /* ActivityIndicatorView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26845FA02942781100ACDBDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26845FBA29428EB500ACDBDD /* ActivityIndicatorView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26845FBC2942AE2700ACDBDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				264CECF7293E35FD0095EA32 /* CarRemote */,
+				26845FA42942781100ACDBDD /* CarRemoteUITests */,
+				26845FC02942AE2700ACDBDD /* CarRemoteTests */,
 				264CECF6293E35FD0095EA32 /* Products */,
+				26845FB829428EB500ACDBDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				264CECF5293E35FD0095EA32 /* CarRemote.app */,
+				26845FA32942781100ACDBDD /* CarRemoteUITests.xctest */,
+				26845FBF2942AE2700ACDBDD /* CarRemoteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +227,29 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		26845FA42942781100ACDBDD /* CarRemoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26845FA52942781100ACDBDD /* CarRemoteUITests.swift */,
+			);
+			path = CarRemoteUITests;
+			sourceTree = "<group>";
+		};
+		26845FB829428EB500ACDBDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26845FC02942AE2700ACDBDD /* CarRemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				26845FC12942AE2700ACDBDD /* CarRemoteTests.swift */,
+			);
+			path = CarRemoteTests;
+			sourceTree = "<group>";
+		};
 		26E49F53293FC1D40043F42F /* Color */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +281,45 @@
 			productReference = 264CECF5293E35FD0095EA32 /* CarRemote.app */;
 			productType = "com.apple.product-type.application";
 		};
+		26845FA22942781100ACDBDD /* CarRemoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26845FAD2942781100ACDBDD /* Build configuration list for PBXNativeTarget "CarRemoteUITests" */;
+			buildPhases = (
+				26845F9F2942781100ACDBDD /* Sources */,
+				26845FA02942781100ACDBDD /* Frameworks */,
+				26845FA12942781100ACDBDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26845FAA2942781100ACDBDD /* PBXTargetDependency */,
+			);
+			name = CarRemoteUITests;
+			packageProductDependencies = (
+				26845FB929428EB500ACDBDD /* ActivityIndicatorView */,
+			);
+			productName = CarRemoteUITests;
+			productReference = 26845FA32942781100ACDBDD /* CarRemoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		26845FBE2942AE2700ACDBDD /* CarRemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26845FC52942AE2700ACDBDD /* Build configuration list for PBXNativeTarget "CarRemoteTests" */;
+			buildPhases = (
+				26845FBB2942AE2700ACDBDD /* Sources */,
+				26845FBC2942AE2700ACDBDD /* Frameworks */,
+				26845FBD2942AE2700ACDBDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26845FC42942AE2700ACDBDD /* PBXTargetDependency */,
+			);
+			name = CarRemoteTests;
+			productName = CarRemoteTests;
+			productReference = 26845FBF2942AE2700ACDBDD /* CarRemoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,6 +332,14 @@
 				TargetAttributes = {
 					264CECF4293E35FD0095EA32 = {
 						CreatedOnToolsVersion = 14.0;
+					};
+					26845FA22942781100ACDBDD = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 264CECF4293E35FD0095EA32;
+					};
+					26845FBE2942AE2700ACDBDD = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 264CECF4293E35FD0095EA32;
 					};
 				};
 			};
@@ -235,6 +360,8 @@
 			projectRoot = "";
 			targets = (
 				264CECF4293E35FD0095EA32 /* CarRemote */,
+				26845FA22942781100ACDBDD /* CarRemoteUITests */,
+				26845FBE2942AE2700ACDBDD /* CarRemoteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +373,20 @@
 			files = (
 				264CED00293E35FE0095EA32 /* Preview Assets.xcassets in Resources */,
 				264CECFD293E35FE0095EA32 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26845FA12942781100ACDBDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26845FBD2942AE2700ACDBDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +415,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		26845F9F2942781100ACDBDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26845FB529428DA800ACDBDD /* CarModel.swift in Sources */,
+				26845FB329428D5500ACDBDD /* LockButton.swift in Sources */,
+				26845FB429428D5500ACDBDD /* UnlockButton.swift in Sources */,
+				26845FB229428D4A00ACDBDD /* Colors.swift in Sources */,
+				26845FB129428D4600ACDBDD /* DoorsStateView.swift in Sources */,
+				26845FB0294289C300ACDBDD /* HomeViewModel.swift in Sources */,
+				26845FAF294289BF00ACDBDD /* DoorsView.swift in Sources */,
+				26845FAE294289B100ACDBDD /* DefaultBluetoothService.swift in Sources */,
+				26845FA62942781100ACDBDD /* CarRemoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26845FBB2942AE2700ACDBDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26845FC82942AF3B00ACDBDD /* HomeViewModel.swift in Sources */,
+				26845FC92942AF3B00ACDBDD /* CarModel.swift in Sources */,
+				26845FCA2942AF3B00ACDBDD /* DefaultBluetoothService.swift in Sources */,
+				26845FC22942AE2700ACDBDD /* CarRemoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26845FAA2942781100ACDBDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 264CECF4293E35FD0095EA32 /* CarRemote */;
+			targetProxy = 26845FA92942781100ACDBDD /* PBXContainerItemProxy */;
+		};
+		26845FC42942AE2700ACDBDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 264CECF4293E35FD0095EA32 /* CarRemote */;
+			targetProxy = 26845FC32942AE2700ACDBDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		264CED01293E35FE0095EA32 /* Debug */ = {
@@ -455,6 +636,76 @@
 			};
 			name = Release;
 		};
+		26845FAB2942781100ACDBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5KXS5M32KB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Hayrapetyan.CarRemoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarRemote;
+			};
+			name = Debug;
+		};
+		26845FAC2942781100ACDBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5KXS5M32KB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Hayrapetyan.CarRemoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarRemote;
+			};
+			name = Release;
+		};
+		26845FC62942AE2700ACDBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5KXS5M32KB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Hayrapetyan.CarRemoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarRemote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarRemote";
+			};
+			name = Debug;
+		};
+		26845FC72942AE2700ACDBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5KXS5M32KB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Hayrapetyan.CarRemoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarRemote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarRemote";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -476,6 +727,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		26845FAD2942781100ACDBDD /* Build configuration list for PBXNativeTarget "CarRemoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26845FAB2942781100ACDBDD /* Debug */,
+				26845FAC2942781100ACDBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26845FC52942AE2700ACDBDD /* Build configuration list for PBXNativeTarget "CarRemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26845FC62942AE2700ACDBDD /* Debug */,
+				26845FC72942AE2700ACDBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -491,6 +760,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		26683EBD293FFA1B0013D330 /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26683EBC293FFA1B0013D330 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+		26845FB929428EB500ACDBDD /* ActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 26683EBC293FFA1B0013D330 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
 			productName = ActivityIndicatorView;
