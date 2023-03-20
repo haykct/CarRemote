@@ -25,6 +25,10 @@ struct MockWithSuccess: BluetoothService {
 
 final class CarRemoteTests: XCTestCase {
     private var viewModel: HomeViewModel!
+    
+    func testNew() {
+        
+    }
 
     func testViewModelAfterResponseFailure() {
         let expectation = expectation(description: "Expecting negative value in ViewModel after response failure")
