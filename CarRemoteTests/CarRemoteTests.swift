@@ -26,7 +26,7 @@ struct MockWithSuccess: BluetoothService {
 final class CarRemoteTests: XCTestCase {
     private var viewModel: HomeViewModel!
     
-    func testNew1() {
+    func testNew() {
         
     }
 
