@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import CarRemote
 
 struct MockWithFailure: BluetoothService {
     func sendCloseDoorsRequest(completion: @escaping (Response) -> Void) {
@@ -23,10 +24,10 @@ struct MockWithSuccess: BluetoothService {
     }
 }
 
-final class CarRemoteTests: XCTestCase {
+final class HomeViewModelTests: XCTestCase {
     private var viewModel: HomeViewModel!
 
-    func testViewModelAfterResponseFailure() {
+    func testCloseDoorsAfterResponseFailure() {
         let expectation = expectation(description: "Expecting negative value in ViewModel after response failure")
         
         viewModel = HomeViewModel(service: MockWithFailure())
@@ -38,7 +39,7 @@ final class CarRemoteTests: XCTestCase {
         XCTAssertFalse(viewModel.car.isLocked)
     }
     
-    func testViewModelAfterResponseSuccess() {
+    func testCloseDoorsAfterResponseSuccess() {
         let expectation = expectation(description: "Expecting positive value in ViewModel after response success")
         
         viewModel = HomeViewModel(service: MockWithSuccess())
