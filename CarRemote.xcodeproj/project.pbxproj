@@ -23,19 +23,8 @@
 		26683EBE293FFA1B0013D330 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 26683EBD293FFA1B0013D330 /* ActivityIndicatorView */; };
 		26683EC0293FFE850013D330 /* GradientCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26683EBF293FFE850013D330 /* GradientCarView.swift */; };
 		26845FA62942781100ACDBDD /* CarRemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26845FA52942781100ACDBDD /* CarRemoteUITests.swift */; };
-		26845FAE294289B100ACDBDD /* DefaultBluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */; };
-		26845FAF294289BF00ACDBDD /* DoorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263533552940F2280059A145 /* DoorsView.swift */; };
-		26845FB0294289C300ACDBDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2AF29411D0A0039BADD /* HomeViewModel.swift */; };
-		26845FB129428D4600ACDBDD /* DoorsStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2BC294239F40039BADD /* DoorsStateView.swift */; };
-		26845FB229428D4A00ACDBDD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F54293FC1EE0043F42F /* Colors.swift */; };
-		26845FB329428D5500ACDBDD /* LockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B8294225C80039BADD /* LockButton.swift */; };
-		26845FB429428D5500ACDBDD /* UnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2BA2942264D0039BADD /* UnlockButton.swift */; };
-		26845FB529428DA800ACDBDD /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B229411DB10039BADD /* CarModel.swift */; };
 		26845FBA29428EB500ACDBDD /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 26845FB929428EB500ACDBDD /* ActivityIndicatorView */; };
 		26845FC22942AE2700ACDBDD /* CarRemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26845FC12942AE2700ACDBDD /* CarRemoteTests.swift */; };
-		26845FC82942AF3B00ACDBDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2AF29411D0A0039BADD /* HomeViewModel.swift */; };
-		26845FC92942AF3B00ACDBDD /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B229411DB10039BADD /* CarModel.swift */; };
-		26845FCA2942AF3B00ACDBDD /* DefaultBluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657E2B529415EE70039BADD /* DefaultBluetoothService.swift */; };
 		26E49F52293F7EBD0043F42F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F51293F7EBD0043F42F /* HomeView.swift */; };
 		26E49F55293FC1EE0043F42F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F54293FC1EE0043F42F /* Colors.swift */; };
 		26E49F57293FC70E0043F42F /* NavigationBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E49F56293FC70E0043F42F /* NavigationBarItemView.swift */; };
@@ -419,14 +408,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26845FB529428DA800ACDBDD /* CarModel.swift in Sources */,
-				26845FB329428D5500ACDBDD /* LockButton.swift in Sources */,
-				26845FB429428D5500ACDBDD /* UnlockButton.swift in Sources */,
-				26845FB229428D4A00ACDBDD /* Colors.swift in Sources */,
-				26845FB129428D4600ACDBDD /* DoorsStateView.swift in Sources */,
-				26845FB0294289C300ACDBDD /* HomeViewModel.swift in Sources */,
-				26845FAF294289BF00ACDBDD /* DoorsView.swift in Sources */,
-				26845FAE294289B100ACDBDD /* DefaultBluetoothService.swift in Sources */,
 				26845FA62942781100ACDBDD /* CarRemoteUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,9 +416,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26845FC82942AF3B00ACDBDD /* HomeViewModel.swift in Sources */,
-				26845FC92942AF3B00ACDBDD /* CarModel.swift in Sources */,
-				26845FCA2942AF3B00ACDBDD /* DefaultBluetoothService.swift in Sources */,
 				26845FC22942AE2700ACDBDD /* CarRemoteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

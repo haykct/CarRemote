@@ -6,8 +6,9 @@
 //
 
 import XCTest
+@testable import CarRemote
 
-final class CarRemoteUITests: XCTestCase {
+final class HomeUITests: XCTestCase {
     
     func testUIUpdateAfterDoorLock() {
         let app = XCUIApplication()
